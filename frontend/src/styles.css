@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fb; }
+.header { background: #1f2937; color: #fff; padding: 1rem; text-align: center; }
+.container { max-width: 900px; margin: 1.5rem auto; padding: 1rem; background: #fff; border-radius: 8px; }
+.article { padding: 12px; border-bottom: 1px solid #eee; }
+.article h3 { margin: 0 0 8px 0; font-size: 1.1rem; }
+.controls { display:flex; gap:8px; padding:8px; }

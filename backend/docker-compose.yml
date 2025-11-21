@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    command: npm run dev
+    ports:
+      - "4000:4000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/newsradar
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - NEWS_API_KEY=${NEWS_API_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      - mongo
+      - redis
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"

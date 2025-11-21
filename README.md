@@ -32,7 +32,6 @@
     Clean separation of concerns in both frontend & backend
 
 🏗️ Architecture Diagram 
-![Architecture Diagram](https://github.com/shrutibamta/NewsRadar/blob/main/Full-Stack%20Web%20Application%20Architecture%20Diagram.png)
 
                      ┌─────────────────────────┐
                      │        Frontend         │

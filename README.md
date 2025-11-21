@@ -32,26 +32,28 @@
     Clean separation of concerns in both frontend & backend
 
 🏗️ Architecture Diagram 
-                 ┌─────────────────────────┐
-                 │        Frontend         │
-                 │      React (Vite/CRA)   │
-                 │  Category UI / Calls API│
-                 └─────────────┬───────────┘
-                               │  REST API Calls
-                               ▼
-               ┌──────────────────────────────────┐
-               │             Backend              │
-               │       Node.js + Express.js       │
-               │  Controllers → Services → Models │
-               └──────┬───────────────────────────┘
-                      │
-      ┌───────────────┼──────────────────────────────┐
-      ▼               ▼                                ▼
-┌──────────┐   ┌───────────────┐               ┌───────────────────┐
-│  MongoDB │   │  Redis Cache  │               │ External News API │
-│ Articles │   │ Stores cached │               │  (NewsAPI etc.)   │
-│ Users    │   │ responses     │               │ fallback source   │
-└──────────┘   └───────────────┘               └───────────────────┘
+![Architecture Diagram](https://github.com/shrutibamta/NewsRadar/blob/main/Full-Stack%20Web%20Application%20Architecture%20Diagram.png)
+
+                     ┌─────────────────────────┐
+                     │        Frontend         │
+                     │      React (Vite/CRA)   │
+                     │  Category UI / Calls API│
+                     └─────────────┬───────────┘
+                                   │  REST API Calls
+                                   ▼
+                   ┌──────────────────────────────────┐
+                   │             Backend              │
+                   │       Node.js + Express.js       │
+                   │  Controllers → Services → Models │
+                   └──────┬───────────────────────────┘
+                          │
+          ┌───────────────┼────────────────────────────────┐
+          ▼               ▼                                ▼
+    ┌──────────┐   ┌───────────────┐               ┌───────────────────┐
+    │  MongoDB │   │  Redis Cache  │               │ External News API │
+    │ Articles │   │ Stores cached │               │  (NewsAPI etc.)   │
+    │ Users    │   │ responses     │               │ fallback source   │
+    └──────────┘   └───────────────┘               └───────────────────┘
 
 📦 Project Structure:
 
